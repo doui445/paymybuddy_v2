@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -41,6 +40,6 @@ public class User {
     @JoinTable(name = "user_connections",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "connected_user_id"))
-    private Set<User> connections = new HashSet<>();
+    private Set<User> connections;
 
 }
