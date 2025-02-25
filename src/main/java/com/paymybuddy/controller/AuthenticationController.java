@@ -3,7 +3,7 @@ package com.paymybuddy.controller;
 import com.paymybuddy.model.User;
 import com.paymybuddy.model.dto.AuthRequestDTO;
 import com.paymybuddy.model.dto.AuthResponseDTO;
-import com.paymybuddy.model.dto.UserRegistrationDto;
+import com.paymybuddy.model.dto.UserRegistrationDTO;
 import com.paymybuddy.service.UserService;
 import com.paymybuddy.service.security.TokenService;
 import jakarta.validation.Valid;
@@ -51,7 +51,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody @Valid UserRegistrationDto userDto, BindingResult bindingResult) {
+    public ResponseEntity<?> register(@RequestBody @Valid UserRegistrationDTO userDto, BindingResult bindingResult) {
         if(bindingResult.hasErrors()){ //Input validation
             return ResponseEntity.badRequest().body(bindingResult.getAllErrors().toString());
         }

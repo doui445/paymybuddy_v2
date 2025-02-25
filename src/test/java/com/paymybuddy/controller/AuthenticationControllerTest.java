@@ -3,7 +3,7 @@ package com.paymybuddy.controller;
 import com.paymybuddy.model.User;
 import com.paymybuddy.model.dto.AuthRequestDTO;
 import com.paymybuddy.model.dto.AuthResponseDTO;
-import com.paymybuddy.model.dto.UserRegistrationDto;
+import com.paymybuddy.model.dto.UserRegistrationDTO;
 import com.paymybuddy.service.UserService;
 import com.paymybuddy.service.security.TokenService;
 import org.junit.jupiter.api.BeforeEach;
@@ -46,11 +46,11 @@ class AuthenticationControllerTest {
     @InjectMocks
     private AuthenticationController authenticationController;
 
-    private UserRegistrationDto userRegistrationDto;
+    private UserRegistrationDTO userRegistrationDto;
 
     @BeforeEach
     void setUp() {
-        userRegistrationDto = new UserRegistrationDto("test", "test@example.com", "password");
+        userRegistrationDto = new UserRegistrationDTO("test", "test@example.com", "password");
     }
 
     @Test
