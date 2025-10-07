@@ -1,5 +1,6 @@
 package com.paymybuddy;
 
+import com.paymybuddy.configuration.rsa.RsaKeyProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -8,6 +9,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication // Indicates a Spring Boot application
+@EnableConfigurationProperties(RsaKeyProperties.class)
 public class PaymybuddyApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(PaymybuddyApplication.class);
